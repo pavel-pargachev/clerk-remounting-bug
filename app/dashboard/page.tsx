@@ -10,6 +10,7 @@ import Link from "next/link";
 
 import { DASHBOARD_CARDS } from "../_template/content/cards";
 import { DeployButton } from "../_template/components/deploy-button";
+import MyOrgSwitcher from "../_template/components/my-org-switcher";
 
 export default async function DashboardPage() {
   await auth.protect();
@@ -47,6 +48,7 @@ export default async function DashboardPage() {
                 </Link>
               </div>
               <div className="flex items-center gap-2">
+                <MyOrgSwitcher/>
                 <UserButton
                   appearance={{
                     elements: {
